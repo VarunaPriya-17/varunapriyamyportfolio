@@ -301,6 +301,14 @@ section{padding:6rem 5%}
   background:var(--bg3);transform:rotateY(180deg);
   padding:1.5rem;display:flex;flex-direction:column;justify-content:space-between;
   border-color:var(--accent);
+  overflow-y:auto;
+}
+.flip-back::-webkit-scrollbar{
+  width:3px;
+}
+.flip-back::-webkit-scrollbar-thumb{
+  background:var(--accent);
+  border-radius:2px;
 }
 .flip-front-top{
   height:140px;display:flex;align-items:center;justify-content:center;
@@ -500,6 +508,13 @@ section{padding:6rem 5%}
 }
 .form-submit:hover{opacity:.85}
 
+/* LANGUAGES GRID */
+.lang-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
 /* FOOTER */
 footer{
   background:var(--bg);border-top:1px solid var(--border);
@@ -524,12 +539,14 @@ footer .f-url{font-family:var(--mono);color:var(--text3)}
   .stats-strip{grid-template-columns:repeat(2,1fr)}
   .about-grid{grid-template-columns:1fr}
   .about-card{position:static}
+  .about-badge{position:static;display:inline-flex;margin-bottom:1.5rem}
   .proj-grid{grid-template-columns:repeat(2,1fr)}
   .cert-grid{grid-template-columns:1fr}
   .contact-grid{grid-template-columns:1fr}
   .ach-grid{grid-template-columns:repeat(2,1fr)}
   .hackathon-list{grid-template-columns:1fr}
   .nav-links{display:none}
+  .lang-grid{grid-template-columns:1fr}
 }
 @media(max-width:600px){
   section{padding:4rem 4%}
@@ -1180,7 +1197,7 @@ body.cursor-hover #custom-cursor-dot {
     <h2 class="sec-title">Languages <em>Known</em></h2>
     <div class="sec-line"></div>
   </div>
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem" class="reveal">
+  <div class="lang-grid reveal">
 
     <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.8rem;position:relative;overflow:hidden;transition:border-color .3s,transform .2s" onmouseover="this.style.borderColor='var(--accent)';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='translateY(0)'">
       <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--pink))"></div>
