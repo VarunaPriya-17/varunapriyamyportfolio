@@ -4,6 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Varuna Priya S — Full Stack Developer</title>
+<link rel="icon" type="image/jpeg" href="my_image.jpeg"/>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -553,8 +554,48 @@ footer .f-url{font-family:var(--mono);color:var(--text3)}
   .proj-grid{grid-template-columns:1fr}
   .stats-strip{grid-template-columns:repeat(2,1fr)}
   .ach-grid{grid-template-columns:1fr}
-  .skills-layout{grid-template-columns:1fr}
-  .skills-nav{display:none}
+  .skills-layout{grid-template-columns:1fr; gap: 1.5rem;}
+  .skills-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    position: static;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    padding: 0;
+    justify-content: center;
+  }
+  .skills-nav li {
+    padding: 0.5rem 0.9rem;
+    margin-bottom: 0;
+    font-size: 0.78rem;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    flex: 1 1 auto;
+    text-align: center;
+    white-space: nowrap;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  }
+  .skills-nav li.active {
+    background: rgba(124, 106, 247, 0.15);
+    border-color: var(--accent);
+    color: var(--accent2);
+    box-shadow: 0 0 12px rgba(124, 106, 247, 0.2);
+  }
+  .skills-nav li:hover {
+    background: var(--surface);
+    border-color: var(--border2);
+  }
+  .skills-nav .nav-icon {
+    font-size: 0.95rem;
+    width: auto;
+  }
 }
 
 /* CUSTOM CURSOR */
